@@ -1,0 +1,26 @@
+{
+    "emails.userActivated.subject": "Je dashboard is nu beschikbaar.",
+    "emails.userActivated.greeting": "Je account is goedgekeurd.",
+    "emails.userActivated.text": "Vanaf nu heb je toegang tot het Van Wijk Uitvaartkisten platform. Klik op de onderstaande knop om het nu te bezoeken.",
+    "emails.userActivated.action": "Open jouw dashboard",
+    "emails.salutation": "Met vriendelijke groeten,\n\nVan Wijk Uitvaartkisten",
+    "emails.userRegistered.subject": "Met succes geregistreerd.",
+    "emails.userRegistered.greeting": "Je registratie aanvraag is ontvangen.",
+    "emails.userRegistered.text": "Zodra je account is goedgekeurd, ontvang je een e-mail van ons.",
+    "emails.open_in_browser": "Lukt het niet om op \":actionText\" te klikken, kopieer dan de volgende url\n in je browser:",
+
+    "emails.userResetPassword.action": "Reset je wachtwoord",
+    "emails.userResetPassword.text": "Je ontvangt deze mail omdat er een nieuwe wachtwoord is aangevraagd. Klik op de knop om je wachtwoord te resetten.",
+    "emails.userResetPassword.greeting": "Er werd een nieuwe wachtwoord aangevraagd",
+    "emails.userResetPassword.subject": "Wachtwoord  reset",
+
+    "emails.userCreated.action": "Kies een wachtwoord en login!",
+    "emails.userCreated.text": "Je ontvangt deze mail omdat er een account is aangemaakt. Klik hieronder om je wachtwoord in te stellen.",
+    "emails.userCreated.greeting": "Er werd een account aangemaakt",
+    "emails.userCreated.subject": "Nieuw account",
+
+    "emails.adminCreated.subject": "Welkom!",
+    "emails.adminCreated.greeting": "Gefeliciteerd! Uw account is succesvol aangemaakt door onze beheerder. Gelieve toegang te krijgen tot het paneel met behulp van de onderstaande referenties:"
+
+
+}

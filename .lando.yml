@@ -1,0 +1,20 @@
+name: backend-vanwijk
+recipe: laravel
+config:
+  webroot: ./public
+  cache: redis
+services:
+  myservice:
+    type: mailhog
+    hogfrom:
+      - appserver
+  appserver:
+    type: php:7.4
+    build_as_root:
+      - apt-get update -y
+      - apt install -y
+      #- pecl install stats-2.0.3
+      #- docker-php-ext-install xsl
+      #- docker-php-ext-enable stats
+      - docker-php-ext-install xmlrpc
+      - docker-php-ext-enable xmlrpc

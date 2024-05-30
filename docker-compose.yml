@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+    redis:
+        image: redis:alpine
+        container_name: myapp-redis
+        command: redis-server --appendonly yes --requirepass "${REDIS_PASSWORD}"
+        volumes:
+            - ./data/redis:/data
+        ports:
+            - 6379:6379
+    app:
+        build:
+            context: .
+            dockerfile: localDockerFile
+        container_name: odoo
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/var/www/html
+            - ./docker/php.ini:/usr/local/etc/php/php.ini
+            - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+        environment:
+            - DB_HOST=host.docker.internal
+            - DB_DATABASE=odoo_project
+            - DB_USERNAME=root
+            - DB_PASSWORD=password

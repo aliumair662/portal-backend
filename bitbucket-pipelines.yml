@@ -1,0 +1,16 @@
+image: node:10.15.3
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          name: Deploy to Staging
+          script:
+            - mkdir -p ~/.ssh
+            - cat my_known_hosts >> ~/.ssh/known_hosts
+            - (umask  077 ; echo $MY_SSH_KEY | base64 -di > ~/.ssh/id_rsa)
+            - ssh -i ~/.ssh/id_rsa $CONNECTION "cd $DIRECTORY && git fetch --all && git reset --hard bitbucket/dev"
+            - ssh -i ~/.ssh/id_rsa $CONNECTION "cd $DIRECTORY && git pull"
+            - ssh -i ~/.ssh/id_rsa $CONNECTION "cd $DIRECTORY && composer install"
+            - ssh -i ~/.ssh/id_rsa $CONNECTION "cd $DIRECTORY && php artisan migrate --force"
+            - echo "Pulled to staging-api dev"

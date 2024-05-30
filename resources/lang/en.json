@@ -1,0 +1,8 @@
+{
+    "emails.userActivated.greeting": "Je account is goedgekeurd.",
+    "emails.userActivated.text": "Vanaf nu heb je toegang tot het Van Wijk Uitvaartkisten platform. Klik op de onderstaande knop om het nu te bezoeken.",
+    "emails.userActivated.action": "Open jouw dashboard",
+    "emails.salutation": "Je account is goedgekeurd.",
+    "emails.userRegistered.greeting": "Je registratie aanvraag is ontvangen.",
+    "emails.userRegistered.text": "Zodra je account is goedgekeurd, ontvang je een e-mail van ons"
+}
